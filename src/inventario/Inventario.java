@@ -1,3 +1,5 @@
+package inventario;
+
 import java.util.ArrayList;
 
 public class Inventario {
@@ -30,5 +32,6 @@ public class Inventario {
 
         p1.borrarDatos();
         p2.borrarDatos();
+  
     }
 }
