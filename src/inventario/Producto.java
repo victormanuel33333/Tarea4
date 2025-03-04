@@ -2,6 +2,16 @@ package inventario;
 
 public class Producto {
 
+    private String nombre;
+    private double precio;
+    private int stock;
+
+    public Producto(String nombre, double precio, int stock) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
+
     /**
      * @return the nombre
      */
@@ -41,15 +51,6 @@ public class Producto {
      * @param stock the stock to set
      */
     public void setStock(int stock) {
-        this.stock = stock;
-    }
-    private String nombre;
-    private double precio;
-    private int stock;
-
-    public Producto(String nombre, double precio, int stock) {
-        this.nombre = nombre;
-        this.precio = precio;
         this.stock = stock;
     }
 
