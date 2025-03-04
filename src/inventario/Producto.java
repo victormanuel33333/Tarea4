@@ -6,10 +6,16 @@ public class Producto {
     private double precio;
     private int stock;
 
-    public Producto(String nombre, double precio, int stock) {
+        // Constructor se hace privado
+    private Producto(String nombre, double precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
+    }
+  
+        // Método de fábrica
+    public static Producto crearProducto(String nombre, double precio, int stock) {
+        return new Producto(nombre, precio, stock);
     }
 
     /**
