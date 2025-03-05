@@ -1,10 +1,15 @@
 package inventario;
+/**
+ * Clase: Producto
+ * @author Victor Manuel Perez Osorio
+ * @version 1.0
+ * @since 2025-03-02
+ * 
+ */
 
 public class Producto {
 
-    public static Producto createProduct(String nombre, double precio, int stock) {
-        return new Producto(nombre, precio, stock);
-    }
+   
 
     private String nombre;
     private double precio;
@@ -16,14 +21,23 @@ public class Producto {
         this.precio = precio;
         this.stock = stock;
     }
-  
-//        // Método de fábrica
-//    //public static Producto createProduct(String nombre, double precio, int stock) {
-//        return Producto.createProduct(nombre, precio, stock);
-//    }
-
+    
     /**
-     * @return the nombre
+ * Crea un nuevo producto con los datos proporcionados.
+ *
+ * @param nombre El nombre del producto.
+ * @param precio El precio del producto.
+ * @param stock La cantidad en stock del producto.
+ * @return Producto - El producto creado con los parámetros especificados.
+ * @throws IllegalArgumentException Si algún parámetro tiene un valor inválido 
+ * (ejemplo: precio negativo o stock negativo).
+ */
+     public static Producto createProduct(String nombre, double precio, int stock) {
+        return new Producto(nombre, precio, stock);
+    }
+  
+    /**
+     * @return the nombre 
      */
     public String getNombre() {
         return nombre;
@@ -64,6 +78,9 @@ public class Producto {
         this.stock = stock;
     }
 
+    /**
+ * Muestra la información del producto en la consola 
+ */
     public void mostrarInformacion() {
         System.out.println("Producto: " + getNombre() + " | Precio: " + getPrecio() + " | Stock: " + getStock());
     }

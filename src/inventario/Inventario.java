@@ -1,18 +1,45 @@
 package inventario;
 
+/**
+ * Clase: Inventario
+ * @author Victor Manuel Perez Osorio
+ * @version 1.0
+ * @since 2025-03-02
+ * 
+ */
+
 import java.util.ArrayList;
 
 public class Inventario {
+    
+    /**
+     * Devuelve la lista de productos almacenados en el inventario.
+     *
+     * @return ArrayList<Producto> Lista de Productos
+     */
     public ArrayList<Producto> listaProductos;
-
+   
+    /**
+ * Constructor de la clase Inventario. Inicializa la lista de productos con una
+ * nueva instancia vacía.
+ */
     public Inventario() {
         listaProductos = new ArrayList<>();
     }
 
+    /**
+ * Agrega un producto al inventario.
+ *
+ * @param p El producto que se va a agregar al inventario.
+ * 
+ */
     public void agregar(Producto p) {
         listaProductos.add(p);
     }
 
+    /**
+ * Muestra la información de todos los productos existentes en el inventario.
+ */
     public void mostrar() {
         for (int i = 0; i < listaProductos.size(); i++) {
             listaProductos.get(i).mostrarInformacion();
