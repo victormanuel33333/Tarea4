@@ -2,6 +2,10 @@ package inventario;
 
 public class Producto {
 
+    public static Producto createProduct(String nombre, double precio, int stock) {
+        return new Producto(nombre, precio, stock);
+    }
+
     private String nombre;
     private double precio;
     private int stock;
@@ -13,10 +17,10 @@ public class Producto {
         this.stock = stock;
     }
   
-        // Método de fábrica
-    public static Producto crearProducto(String nombre, double precio, int stock) {
-        return new Producto(nombre, precio, stock);
-    }
+//        // Método de fábrica
+//    //public static Producto createProduct(String nombre, double precio, int stock) {
+//        return Producto.createProduct(nombre, precio, stock);
+//    }
 
     /**
      * @return the nombre
@@ -64,9 +68,4 @@ public class Producto {
         System.out.println("Producto: " + getNombre() + " | Precio: " + getPrecio() + " | Stock: " + getStock());
     }
 
-    public void borrarDatos() {
-        setNombre("");
-        setPrecio(0.0);
-        setStock(0);
-    }
 }
